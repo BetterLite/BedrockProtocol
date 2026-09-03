@@ -68,7 +68,7 @@ class ReleaseItemTransactionData extends TransactionData{
 	/**
 	 * @generate-create-func
 	 */
-	private static function initSelf(int $actionType, int $hotbarSlot, ItemStackWrapper $itemInHand, Vector3 $headPosition) : self{
+	private static function initSelf(int $actionType, int $hotbarSlot, \pocketmine\network\mcpe\protocol\types\inventory\ItemStackWrapper $itemInHand, \pocketmine\math\Vector3 $headPosition) : self{
 		$result = new self;
 		$result->actionType = $actionType;
 		$result->hotbarSlot = $hotbarSlot;

@@ -117,15 +117,15 @@ class UseItemTransactionData extends TransactionData{
 	 */
 	private static function initSelf(
 		int $actionType,
-		TriggerType $triggerType,
-		BlockPosition $blockPosition,
+		\pocketmine\network\mcpe\protocol\types\inventory\TriggerType $triggerType,
+		\pocketmine\network\mcpe\protocol\types\BlockPosition $blockPosition,
 		int $face,
 		int $hotbarSlot,
-		ItemStackWrapper $itemInHand,
-		Vector3 $playerPosition,
-		Vector3 $clickPosition,
+		\pocketmine\network\mcpe\protocol\types\inventory\ItemStackWrapper $itemInHand,
+		\pocketmine\math\Vector3 $playerPosition,
+		\pocketmine\math\Vector3 $clickPosition,
 		int $blockRuntimeId,
-		PredictedResult $clientInteractPrediction,
+		\pocketmine\network\mcpe\protocol\types\inventory\PredictedResult $clientInteractPrediction,
 		int $clientCooldownState,
 	) : self{
 		$result = new self;

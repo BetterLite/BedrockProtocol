@@ -43,7 +43,7 @@ class ResourcePacksInfoPacket extends DataPacket implements ClientboundPacket{
 		bool $mustAccept,
 		bool $hasAddons,
 		bool $hasScripts,
-		UuidInterface $worldTemplateId,
+		\Ramsey\Uuid\UuidInterface $worldTemplateId,
 		string $worldTemplateVersion,
 		bool $forceDisableVibrantVisuals,
 	) : self{

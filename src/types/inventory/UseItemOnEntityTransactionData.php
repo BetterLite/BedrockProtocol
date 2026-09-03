@@ -83,7 +83,7 @@ class UseItemOnEntityTransactionData extends TransactionData{
 	/**
 	 * @generate-create-func
 	 */
-	private static function initSelf(int $actorRuntimeId, int $actionType, int $hotbarSlot, ItemStackWrapper $itemInHand, Vector3 $playerPosition, Vector3 $clickPosition) : self{
+	private static function initSelf(int $actorRuntimeId, int $actionType, int $hotbarSlot, \pocketmine\network\mcpe\protocol\types\inventory\ItemStackWrapper $itemInHand, \pocketmine\math\Vector3 $playerPosition, \pocketmine\math\Vector3 $clickPosition) : self{
 		$result = new self;
 		$result->actorRuntimeId = $actorRuntimeId;
 		$result->actionType = $actionType;
