@@ -14,14 +14,11 @@ declare(strict_types=1);
 
 namespace pocketmine\network\mcpe\protocol\types;
 
-final class GameRuleType{
+enum ScorePacketEntryAction : string{
+	use PacketOrdinalEnumTrait;
 
-	private function __construct(){
-		//NOOP
-	}
-
-	public const NULL = 0;
-	public const BOOL = 1;
-	public const INT = 2;
-	public const FLOAT = 3;
+	case REMOVE = "remove";
+	case CHANGE_PLAYER = "changeplayer";
+	case CHANGE_ENTITY = "changeentity";
+	case CHANGE_FAKE_PLAYER = "changefakeplayer";
 }

@@ -12,16 +12,13 @@
 
 declare(strict_types=1);
 
-namespace pocketmine\network\mcpe\protocol\types;
+namespace pocketmine\network\mcpe\protocol\types\skin;
 
-final class GameRuleType{
+use pocketmine\network\mcpe\protocol\types\PacketOrdinalEnumTrait;
 
-	private function __construct(){
-		//NOOP
-	}
+enum SkinArmSizeType : string{
+	use PacketOrdinalEnumTrait;
 
-	public const NULL = 0;
-	public const BOOL = 1;
-	public const INT = 2;
-	public const FLOAT = 3;
+	case SLIM = "slim";
+	case WIDE = "wide";
 }

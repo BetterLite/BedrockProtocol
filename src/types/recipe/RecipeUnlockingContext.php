@@ -12,16 +12,15 @@
 
 declare(strict_types=1);
 
-namespace pocketmine\network\mcpe\protocol\types;
+namespace pocketmine\network\mcpe\protocol\types\recipe;
 
-final class GameRuleType{
+use pocketmine\network\mcpe\protocol\types\PacketIntEnumTrait;
 
-	private function __construct(){
-		//NOOP
-	}
+enum RecipeUnlockingContext : int{
+	use PacketIntEnumTrait;
 
-	public const NULL = 0;
-	public const BOOL = 1;
-	public const INT = 2;
-	public const FLOAT = 3;
+	case NONE = 0;
+	case ALWAYS_UNLOCKED = 1;
+	case PLAYER_IN_WATER = 2;
+	case PLAYER_HAS_MANY_ITEMS = 3;
 }
